@@ -9,12 +9,13 @@
         "start": "npm run watch",
         "lint:js": "eslint resources/assets/js/**/*.{js,vue}",
         "lint:sass": "stylelint resources/assets/sass/**/*.{scss,sass}",
-        "lint": "npm run lint:js && npm run lint:sass"
+        "lint": "npm run lint:js && npm run lint:sass",
+        "usebootstrap": "npm i --save bootstrap && node build/scaffold.js -f bootstrap"
     },
     "dependencies": {
-        "bootstrap": "^4.3.1",
+        "bootstrap": "^4.6.0",
         "bulma": "^0.5.1",
-        "jquery": "^1.9.1",
+        "jquery": "^3.6.0",
         "motion-ui": "^1.2.2",
         "popper.js": "^1.15.0",
         "vue": "^2.4.3",
@@ -39,6 +40,7 @@
         "eslint-plugin-vue": "^7.5.0",
         "eslint-webpack-plugin": "^2.4.3",
         "file-loader": "^0.11.1",
+        "fs-extra": "^3.0.1",
         "image-minimizer-webpack-plugin": "^2.2.0",
         "imagemin-webpack-plugin": "^2.4.2",
         "img-loader": "^3.0.2",
@@ -48,6 +50,7 @@
         "postcss": "^8.2.4",
         "postcss-loader": "^4.2.0",
         "sass-loader": "^10.1.1",
+        "stdio": "^2.1.1",
         "style-loader": "^0.16.1",
         "stylelint": "^13.9.0",
         "stylelint-webpack-plugin": "^2.1.1",

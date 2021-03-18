@@ -17,6 +17,8 @@ module.exports = merge({
     fonts: path.resolve(__dirname, '../resources/assets/fonts'),
     images: path.resolve(__dirname, '../resources/assets/images'),
     javascript: path.resolve(__dirname, '../resources/assets/js'),
+    assets: path.resolve(__dirname, '../resources/assets'),
+    scaffold: path.resolve(__dirname, '../scaffold'),
     relative: '../',
     external: /node_modules|bower_components/
   },
