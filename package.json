@@ -6,6 +6,7 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production webpack --progress --config build/webpack.config.js",
         "watch": "npm run development -- --watch && webpack-dev-server --progress --colors",
+        "start": "npm run watch",
         "lint:js": "eslint resources/assets/js/**/*.{js,vue}",
         "lint:sass": "stylelint resources/assets/sass/**/*.{scss,sass}",
         "lint": "npm run lint:js && npm run lint:sass"
@@ -13,7 +14,6 @@
     "dependencies": {
         "bootstrap": "^4.3.1",
         "bulma": "^0.5.1",
-        "foundation-sites": "^6.4.1",
         "jquery": "^1.9.1",
         "motion-ui": "^1.2.2",
         "popper.js": "^1.15.0",
