@@ -1,2 +1,16 @@
 // bootstrap scaffold.scss
+@import '_bootstrap-config';
 @import "~bootstrap/scss/bootstrap";
+
+#content {
+  @include make-container();
+  @include make-container-max-widths();
+}
+
+#primary {
+  @include make-row();
+}
+
+nav#site-navigation {
+  width: $menu-left-width;
+}
