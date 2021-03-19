@@ -1,0 +1,17 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  color: #000;
+  background: #c1a9c9;
+}
+
+a {
+  color: #000;
+
+  &:hover {
+    color: #ffdf60;
+  }
+}
+
+h1 {
+  font-size: 32px;
+}

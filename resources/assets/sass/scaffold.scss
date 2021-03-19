@@ -11,6 +11,12 @@
   @include make-row();
 }
 
-nav#site-navigation {
+#menu-wrap {
+  @include make-col-ready();
   width: $menu-left-width;
+}
+
+main#main {
+  @include make-col-ready();
+  width: calc(100% - #{$menu-left-width});
 }

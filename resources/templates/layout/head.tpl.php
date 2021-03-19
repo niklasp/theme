@@ -7,6 +7,7 @@
  */
 namespace Tonik\Theme\Header;
 use function Tonik\Theme\App\template;
+use function Tonik\Theme\App\asset_path;
 
 ?>
 <!doctype html>
@@ -24,5 +25,13 @@ use function Tonik\Theme\App\template;
 
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">
-            <?php template('layout/nav'); ?>
+            <div id="menu-wrap">
+                <h1>Prachttomate</h1>
+                <h2>Gemeinschaftsgarten in Berlin Neukölln</h2>
+                <img
+                    src="<?php echo asset_path('images/piratentomate_no_bg.png') ?>"
+                    alt="logo"
+                />
+                <?php template('layout/nav'); ?>
+            </div>
 			<main id="main" class="site-main" role="main">
