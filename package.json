@@ -15,8 +15,11 @@
     "dependencies": {
         "bootstrap": "^4.6.0",
         "bulma": "^0.5.1",
+        "install": "^0.13.0",
         "jquery": "^3.6.0",
+        "medium-zoom": "^1.0.6",
         "motion-ui": "^1.2.2",
+        "npm": "^7.6.3",
         "popper.js": "^1.15.0",
         "vue": "^2.4.3",
         "what-input": "^4.1.3"

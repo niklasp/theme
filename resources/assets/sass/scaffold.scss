@@ -2,6 +2,10 @@
 @import '_bootstrap-config';
 @import "~bootstrap/scss/bootstrap";
 
+#page {
+  padding-top: 50px;
+}
+
 #content {
   @include make-container();
   @include make-container-max-widths();

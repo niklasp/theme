@@ -38,17 +38,6 @@
                 ?>
             <?php endif; ?>
         </div>
-
-        <?php if (apply_filters('theme/index/sidebar/visibility', true)) : ?>
-            <?php
-                /**
-                 * Functions hooked into `theme/index/sidebar` action.
-                 *
-                 * @hooked Tonik\Theme\App\Structure\render_sidebar - 10
-                 */
-                do_action('theme/index/sidebar');
-            ?>
-        <?php endif; ?>
     </div>
 </section>
 

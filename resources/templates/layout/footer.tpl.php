@@ -9,7 +9,7 @@
                 </div>
             </div>
         </div>
-
+        <div id="cursor-wrap"></div>
         <?php wp_footer(); ?>
     </body>
 </html>

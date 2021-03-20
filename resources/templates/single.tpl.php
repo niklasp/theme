@@ -16,17 +16,6 @@
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
-
-        <?php if (apply_filters('theme/single/sidebar/visibility', true)) : ?>
-            <?php
-                /**
-                 * Functions hooked into `theme/single/sidebar` action.
-                 *
-                 * @hooked Tonik\Theme\App\Structure\render_sidebar - 10
-                 */
-                do_action('theme/single/sidebar');
-            ?>
-        <?php endif; ?>
     </div>
 </section>
 

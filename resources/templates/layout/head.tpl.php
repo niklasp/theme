@@ -33,5 +33,10 @@ use function Tonik\Theme\App\asset_path;
                     alt="logo"
                 />
                 <?php template('layout/nav'); ?>
+                <?php if ( is_active_sidebar( 'menu_widgets' ) ) : ?>
+                    <div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+                        <?php dynamic_sidebar( 'menu_widgets' ); ?>
+                    </div><!-- #primary-sidebar -->
+                <?php endif; ?>
             </div>
 			<main id="main" class="site-main" role="main">
