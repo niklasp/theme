@@ -7,5 +7,5 @@
         <small><?php the_date(); ?></small>
     </time>
 
-    <p><?php the_excerpt(); ?></h2>
+    <div class="post-excerpt"><?php the_excerpt(); ?></div>
 </article>

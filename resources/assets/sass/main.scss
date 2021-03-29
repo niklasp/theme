@@ -16,7 +16,6 @@ body {
 }
 
 .intro {
-  padding-top: 4rem;
   padding-bottom: 4rem;
 }
 
@@ -50,6 +49,7 @@ img {
   background: #000;
   padding: 1px 10px;
   color: #fff;
+  text-decoration: none !important;
   // cursor: none;
   
   &:hover {
