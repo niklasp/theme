@@ -1,13 +1,43 @@
+html {
+  min-height: 100%;
+}
+
 body {
   font-family: 'Courier New', Courier, monospace;
   color: #000;
-  background: #c1a9c9;
-  cursor: none;
+  background-image: linear-gradient(to top, #df89b5 0%, #bfd9fe 100%);
+  // cursor: none;
   font-size: 18px;
+  background-size: cover;
 }
 
 #page {
   padding-top: 30px;
+}
+
+.intro {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.hamburger {
+  position: fixed;
+  top: 16px;
+  right: 10px;
+  z-index: 10;
+
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    border-radius: 0;
+    height: 2px;
+  }
+
+  .hamburger-inner::before {
+    top: 12px;
+  }
+
+  .hamburger-inner::after {
+    top: 24px;
+  }
 }
 
 
@@ -16,16 +46,21 @@ img {
   height: auto;
 }
 
-a {
+.primary-navigation a {
   background: #000;
   padding: 1px 10px;
   color: #fff;
-  cursor: none;
-
+  // cursor: none;
+  
   &:hover {
     color: #ffdf60;
     text-decoration: none;
   }
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
 }
 
 h1 {
@@ -43,16 +78,172 @@ h2 {
   pointer-events: none;
   width: 128px;
   height: 87px;
-  top: -100%;
-  left: -100%;
+  top: 0;
+  left: 0;
+  // top: -100%;
+  // left: -100%;
   background-image: url('../images/gk_sm.gif');
   background-repeat: no-repeat;
 }
 
 main#main {
-  padding-left: 50px;
+  @include media-breakpoint-up(md) {
+    padding-left: 50px;
+  }
 }
 
 article h1:first-of-type {
   margin-bottom: 50px;
+}
+
+.vegetable {
+  background-image: url('../images/vegetables.png');
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  display: none;
+  // transform: scale(2.0);
+}
+
+$v-cols: 10;
+$v-rows: 18;
+@for $r from 0 through $v-rows {
+  @for $c from 0 through $v-cols {
+    .vegetable.v#{$r * ($v-cols) + ($c + 1)} {
+      left: $c * 48px;
+      top: $r * 48px;
+      background-position: -(52px + $c * 48px) (-52px - $r * 48px);
+    }
+  }
+}
+
+.einkaufswagen {
+  background-image: url('../images/einkaufswagen.png');
+  width: 48%;
+  height: 40%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+.flier {
+  pointer-events: none;
+}
+
+.shake {
+  animation: shake 1s linear infinite;
+}
+
+@keyframes shake {
+  0%{
+    transform: rotateZ(5deg);
+  }
+  10% {
+    transform: rotateZ(0deg);
+  }
+  20% {
+    transform: rotateZ(5deg);
+  }
+  30% {
+    transform: rotateZ(0deg);
+  }
+  40% {
+    transform: rotateZ(5deg);
+  }
+}
+
+.flier {
+  /* Adjust animation duration to change the element’s speed */
+  animation: fly 50s linear infinite;
+  pointer-events: none !important;
+  top: 0;
+  left: 0;
+  transform: translateX(-120%) translateY(-120%) rotateZ(0);
+  position: fixed;
+  animation-delay: 1s;
+  z-index: 999999;
+}
+
+.move-bottom {
+  animation: movebottom 200s linear infinite;
+  pointer-events: none !important;
+  bottom: 0;
+  left: 0;
+  transform: translateX(100vw) rotateZ(0);
+  position: fixed;
+  animation-delay: 1s;
+  z-index: 999999;
+  display: block;
+  transform-origin: bottom left;
+}
+
+@keyframes movebottom {
+  
+  98.001%, 0% {
+    transform: translateX(100vw);
+  }
+  
+  15% {
+    transform: translateX(-100%);
+  }
+  
+  15.001%, 18% {
+    transform: translateX(-100%) rotateY(180deg);
+  }
+  
+  40% {
+    transform: translateX(100vw) rotateY(180deg);
+  }
+  
+  40.001%, 43% {
+    transform: translateX(100vw);
+  }
+  
+  65% {
+    transform: translateX(-100%) scale(0.5);
+  }
+  
+  65.001%, 68% {
+    transform: translateX(100vw) rotateY(180deg) scale(1);
+  }
+  
+  95% {
+    transform: translateX(100vw) rotateY(180deg);
+  }
+}
+
+@keyframes fly {
+  
+  98.001%, 0% {
+    display: block;
+    transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+  }
+  
+  15% {
+    transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+  }
+  
+  15.001%, 18% {
+    transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+  }
+  
+  40% {
+    transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+  }
+  
+  40.001%, 43% {
+    transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+  }
+  
+  65% {
+    transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+  }
+  
+  65.001%, 68% {
+    transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+  }
+  
+  95% {
+    transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+  }
 }

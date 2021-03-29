@@ -13,8 +13,10 @@
         "usebootstrap": "npm i --save bootstrap && node build/scaffold.js -f bootstrap"
     },
     "dependencies": {
+        "animejs": "^3.2.1",
         "bootstrap": "^4.6.0",
         "bulma": "^0.5.1",
+        "hamburgers": "^1.1.3",
         "install": "^0.13.0",
         "jquery": "^3.6.0",
         "medium-zoom": "^1.0.6",

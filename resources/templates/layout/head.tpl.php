@@ -21,11 +21,15 @@ use function Tonik\Theme\App\asset_path;
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
+    <button class="hamburger hamburger--slider d-block d-md-none" type="button">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>  
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'twentytwentyone' ); ?></a>
-
 	<div id="content" class="site-content">
 		<div id="primary" class="content-area">
-            <div id="menu-wrap">
+            <div id="menu-wrap" class="d-none d-md-block">
                 <h1>Prachttomate</h1>
                 <h2>Gemeinschaftsgarten in Berlin Neukölln</h2>
                 <img
@@ -38,5 +42,14 @@ use function Tonik\Theme\App\asset_path;
                         <?php dynamic_sidebar( 'menu_widgets' ); ?>
                     </div><!-- #primary-sidebar -->
                 <?php endif; ?>
+            </div>
+            <div id="mobile-menu-wrap" class="d-flex d-md-none">
+                <h1>Prachttomate</h1>
+                <h2>Gemeinschaftsgarten in Berlin Neukölln</h2>
+                <img
+                    src="<?php echo asset_path('images/piratentomate_no_bg.png') ?>"
+                    alt="logo"
+                />
+                <?php template('layout/nav'); ?>
             </div>
 			<main id="main" class="site-main" role="main">

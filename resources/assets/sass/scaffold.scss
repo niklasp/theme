@@ -22,5 +22,8 @@
 
 main#main {
   @include make-col-ready();
-  width: calc(100% - #{$menu-left-width});
+
+  @include media-breakpoint-up(md) {
+    width: calc(100% - #{$menu-left-width});
+  }
 }

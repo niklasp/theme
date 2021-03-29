@@ -6,4 +6,6 @@
     <time>
         <small><?php the_date(); ?></small>
     </time>
+
+    <p><?php the_excerpt(); ?></h2>
 </article>
